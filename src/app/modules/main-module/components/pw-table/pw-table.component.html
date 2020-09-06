@@ -1,0 +1,29 @@
+<div class="TransactionHistory">
+<h1 class="TransactionHistory-title">Transactions history</h1>
+
+<table class="TransactionHistory-table mat-elevation-z8" mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="position">
+      <th class="TransactionHistory-tableHead" mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+      <td class="TransactionHistory-tableData" mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th class="TransactionHistory-tableHead" mat-header-cell *matHeaderCellDef mat-sort-header>Receiver Name</th>
+      <td class="TransactionHistory-tableData" mat-cell *matCellDef="let element"> {{element.receiverName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="weight">
+      <th class="TransactionHistory-tableHead" mat-header-cell *matHeaderCellDef mat-sort-header>Transaction amount</th>
+      <td class="TransactionHistory-tableData" mat-cell *matCellDef="let element"> {{element.transactionAmount}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="symbol">
+      <th class="TransactionHistory-tableHead" mat-header-cell *matHeaderCellDef mat-sort-header>Resulting balance</th>
+      <td class="TransactionHistory-tableData" mat-cell *matCellDef="let element"> {{element.resultingBalance}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

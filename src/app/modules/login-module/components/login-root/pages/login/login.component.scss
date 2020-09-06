@@ -1,0 +1,53 @@
+.LoginForm {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    &-divider {
+        width: 30%;
+        height: 3px;
+        background: #ff4081;
+    }
+
+    &-footer {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    &-signUp {
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    &-footerText {
+        margin-bottom: 10px;
+    }
+
+    &-field {
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    &-submit {
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+}

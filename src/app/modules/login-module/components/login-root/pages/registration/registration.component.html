@@ -1,0 +1,25 @@
+<form class="RegisterForm" [formGroup]="registrationForm" 
+    (submit)="submit(registrationForm.controls['login'].value,
+                    registrationForm.controls['email'].value,
+                    registrationForm.controls['password'].value,
+                    registrationForm.controls['passwordAgain'].value)">
+    <h3>Sing Up</h3>
+    <div class="RegisterForm-divider"></div>
+    <mat-form-field class="RegisterForm-field">
+        <input matInput placeholder="Login" formControlName="login">
+    </mat-form-field>
+    <mat-form-field class="RegisterForm-field">
+        <input matInput placeholder="E-mail" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="RegisterForm-field">
+        <input matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <mat-form-field class="RegisterForm-field">
+        <input matInput placeholder="Password" formControlName="passwordAgain">
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="RegisterForm-submit">Sign In</button>
+    <div class="RegisterForm-footer">
+        <div class="RegisterForm-footerText">Have not account yet?</div>
+        <a class="RegisterForm-signUp" routerLink="/login/auth" >Sign In</a>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+<form class="LoginForm" [formGroup]="authForm" (submit)="submit(authForm.controls['email'].value, authForm.controls['password'].value)">
+    <h3>Sign in</h3>
+    <div class="LoginForm-divider"></div>
+    <mat-form-field class="LoginForm-field">
+        <input matInput placeholder="E-mail" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="LoginForm-field">
+        <input matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="LoginForm-submit">Sign In</button>
+    <div class="LoginForm-footer">
+        <div class="LoginForm-footerText">Have not account yet?</div>
+        <a class="LoginForm-signUp" routerLink="/login/register" routerLinkActive="active">Sign up</a>
+    </div>
+</form>
